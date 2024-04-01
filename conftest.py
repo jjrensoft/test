@@ -70,8 +70,9 @@ def web_page_new():
         browser.close()
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    # 获取钩子方法调用结果
+#item：代表当前的测试用例项（test item），包括测试用例的名称、标记、位置等信息。item：代表当前的测试用例项（test item），包括测试用例的名称、标记、位置等信息。
+def pytest_runtest_makereport(item):
+    # 使用 yield 语句获取钩子方法的调用结果（out），这里是获取测试用例的测试结果
     out = yield
     #获取执行结果
     report=out.get_result()
