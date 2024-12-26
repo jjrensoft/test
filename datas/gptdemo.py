@@ -10,8 +10,8 @@
 # 设置 OpenAI API 访问 Token
 import requests
 def Gptdemo(msg: str) -> str:
-    url = "http://rd-gateway.patsnap.io"
-    api_token = "cmVuamlhamlhOmdZRlhFVGNUS2Y5cUhRUzRzY0VKOWk="
+    url = ""
+    api_token = ""
     headers = {
         "Authorization": f"Basic {api_token}",
         "Content-Type": "application/json",
